@@ -8,7 +8,7 @@ pm.test("verify shipping fee returned in response is correct", function () {
         }
         else {
             if (request.amount < 35) {
-                pm.expect(response.shippingFee).to.eql(13.99);
+                pm.expect(response.shippingFee).to.eql(6.99);
             }
             else {
                 pm.expect(response.shippingFee).to.eql(0);
@@ -20,7 +20,7 @@ pm.test("verify shipping fee returned in response is correct", function () {
             pm.expect(response.shippingFee).to.eql(0);
         }
         else {
-            pm.expect(response.shippingFee).to.eql(24.99);
+            pm.expect(response.shippingFee).to.eql(13.99);
         }
     }
 });
